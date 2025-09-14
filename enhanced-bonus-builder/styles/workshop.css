@@ -1,0 +1,129 @@
+/* Enhanced Bonus Builder - Workshop Styles */
+
+.enhanced-bonus-builder-workshop {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.enhanced-bonus-builder-workshop .sheet-header {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--ebb-border-color);
+}
+
+.enhanced-bonus-builder-workshop .header-left,
+.enhanced-bonus-builder-workshop .header-right {
+  display: flex;
+  align-items: center;
+}
+
+.enhanced-bonus-builder-workshop .name-stacked {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.enhanced-bonus-builder-workshop .title {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.enhanced-bonus-builder-workshop .subtitle {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.enhanced-bonus-builder-workshop .pages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.enhanced-bonus-builder-workshop .select-type {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.enhanced-bonus-builder-workshop .select-type .header {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--ebb-border-color);
+}
+
+.enhanced-bonus-builder-workshop .bonus-types {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.enhanced-bonus-builder-workshop .bonus-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid var(--ebb-border-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.enhanced-bonus-builder-workshop .bonus-type:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px var(--ebb-shadow-color);
+}
+
+.enhanced-bonus-builder-workshop .bonus-type i {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: var(--ebb-primary-color);
+}
+
+.enhanced-bonus-builder-workshop .bonus-type h3 {
+  margin: 0;
+  text-align: center;
+}
+
+.enhanced-bonus-builder-workshop .sheet-footer {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  border-top: 1px solid var(--ebb-border-color);
+}
+
+.enhanced-bonus-builder-workshop .sheet-footer button {
+  margin-left: 5px;
+}
+
+.enhanced-bonus-builder-workshop .tabs {
+  flex: 0 0 30px;
+  border-bottom: 1px solid var(--ebb-border-color);
+  padding: 0 5px;
+}
+
+.enhanced-bonus-builder-workshop .tabs .item {
+  line-height: 30px;
+  padding: 0 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.enhanced-bonus-builder-workshop .tabs .item.active {
+  color: var(--ebb-primary-color);
+  border-bottom: 2px solid var(--ebb-primary-color);
+}
+
+.enhanced-bonus-builder-workshop .tab {
+  padding: 10px;
+  height: calc(100% - 30px);
+  overflow-y: auto;
+}

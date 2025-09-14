@@ -1,0 +1,169 @@
+/* Enhanced Bonus Builder - Key Elements Styles */
+
+/* Bonus Link in Text */
+.enhanced-bonus-builder-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 5px;
+  background-color: rgba(75, 110, 175, 0.1);
+  border: 1px solid rgba(75, 110, 175, 0.2);
+  border-radius: 3px;
+  color: var(--ebb-primary-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.enhanced-bonus-builder-link:hover {
+  background-color: rgba(75, 110, 175, 0.2);
+  border-color: rgba(75, 110, 175, 0.3);
+}
+
+.enhanced-bonus-builder-link i {
+  margin-right: 5px;
+}
+
+/* Applied Bonuses Chat Message */
+.enhanced-bonus-builder-applied-bonuses {
+  background: var(--ebb-light-color);
+  border: 1px solid var(--ebb-border-color);
+  border-radius: 5px;
+  padding: 8px;
+  margin: 5px 0;
+  box-shadow: 0 0 5px var(--ebb-shadow-color);
+}
+
+.enhanced-bonus-builder-applied-bonuses h3 {
+  color: var(--ebb-primary-color);
+  border-bottom: 1px solid var(--ebb-border-color);
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+}
+
+.enhanced-bonus-builder-applied-bonuses ul {
+  list-style-type: disc;
+  margin: 5px 0 5px 20px;
+  padding: 0;
+}
+
+.enhanced-bonus-builder-applied-bonuses p {
+  font-weight: bold;
+  margin-top: 5px;
+  text-align: right;
+}
+
+/* Bonus Icon */
+.enhanced-bonus-builder-icon {
+  color: var(--ebb-primary-color);
+}
+
+/* Bonus Status */
+.enhanced-bonus-builder-enabled {
+  color: var(--ebb-success-color);
+}
+
+.enhanced-bonus-builder-disabled {
+  color: var(--ebb-danger-color);
+}
+
+/* Dialog */
+.enhanced-bonus-builder-dialog .window-content {
+  padding: 0;
+}
+
+.enhanced-bonus-builder-dialog .dialog-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.enhanced-bonus-builder-dialog .dialog-button {
+  background-color: var(--ebb-primary-color);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.enhanced-bonus-builder-dialog .dialog-button:hover {
+  background-color: var(--ebb-secondary-color);
+}
+
+.enhanced-bonus-builder-dialog .dialog-button.cancel {
+  background-color: #999;
+}
+
+.enhanced-bonus-builder-dialog .dialog-button.cancel:hover {
+  background-color: #777;
+}
+
+/* Form Elements */
+.enhanced-bonus-builder input[type="text"],
+.enhanced-bonus-builder input[type="number"],
+.enhanced-bonus-builder select,
+.enhanced-bonus-builder textarea {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--ebb-border-color);
+  border-radius: 3px;
+  padding: 5px;
+  color: var(--ebb-text-color);
+}
+
+.enhanced-bonus-builder input[type="text"]:focus,
+.enhanced-bonus-builder input[type="number"]:focus,
+.enhanced-bonus-builder select:focus,
+.enhanced-bonus-builder textarea:focus {
+  border-color: var(--ebb-primary-color);
+  box-shadow: 0 0 3px var(--ebb-primary-color);
+}
+
+.enhanced-bonus-builder input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.enhanced-bonus-builder button {
+  background-color: var(--ebb-primary-color);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.enhanced-bonus-builder button:hover {
+  background-color: var(--ebb-secondary-color);
+}
+
+.enhanced-bonus-builder button.danger {
+  background-color: var(--ebb-danger-color);
+}
+
+.enhanced-bonus-builder button.danger:hover {
+  background-color: #ff0000;
+}
+
+/* Separator */
+.enhanced-bonus-builder .sep {
+  margin: 0 5px;
+  color: #666;
+}
+
+/* File Picker */
+.enhanced-bonus-builder .file-picker {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  line-height: 22px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--ebb-border-color);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.enhanced-bonus-builder .file-picker:hover {
+  background: rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,225 @@
+/* Enhanced Bonus Builder - Shared Styles */
+
+.enhanced-bonus-builder {
+  --ebb-primary-color: #4b6eaf;
+  --ebb-secondary-color: #7a9cd3;
+  --ebb-accent-color: #2c3e50;
+  --ebb-text-color: #191813;
+  --ebb-light-color: #f0f0e0;
+  --ebb-border-color: #c9c7b8;
+  --ebb-shadow-color: rgba(0, 0, 0, 0.1);
+  --ebb-success-color: #009933;
+  --ebb-warning-color: #ff9900;
+  --ebb-danger-color: #cc3333;
+}
+
+/* Applied Bonuses Chat Message */
+.enhanced-bonus-builder.applied-bonuses {
+  background: var(--ebb-light-color);
+  border: 1px solid var(--ebb-border-color);
+  border-radius: 5px;
+  padding: 8px;
+  margin: 5px 0;
+  box-shadow: 0 0 5px var(--ebb-shadow-color);
+}
+
+.enhanced-bonus-builder.applied-bonuses h3 {
+  color: var(--ebb-primary-color);
+  border-bottom: 1px solid var(--ebb-border-color);
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+}
+
+.enhanced-bonus-builder.applied-bonuses ul {
+  list-style-type: disc;
+  margin: 5px 0 5px 20px;
+  padding: 0;
+}
+
+.enhanced-bonus-builder.applied-bonuses p {
+  font-weight: bold;
+  margin-top: 5px;
+  text-align: right;
+}
+
+/* Bonus Icon */
+.enhanced-bonus-builder-icon {
+  color: var(--ebb-primary-color);
+  margin-right: 5px;
+}
+
+/* Bonus Status */
+.enhanced-bonus-builder-enabled {
+  color: var(--ebb-success-color);
+}
+
+.enhanced-bonus-builder-disabled {
+  color: var(--ebb-danger-color);
+}
+
+/* Optional Bonuses Dialog */
+.enhanced-bonus-builder-optional {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.enhanced-bonus-builder-optional .bonus-item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid var(--ebb-border-color);
+}
+
+.enhanced-bonus-builder-optional .bonus-item:last-child {
+  border-bottom: none;
+}
+
+.enhanced-bonus-builder-optional .bonus-name {
+  flex: 1;
+  font-weight: bold;
+}
+
+.enhanced-bonus-builder-optional .bonus-value {
+  margin: 0 10px;
+}
+
+.enhanced-bonus-builder-optional .bonus-toggle {
+  margin-left: 10px;
+}
+
+/* Character Sheet Tab */
+.enhanced-bonus-builder-tab {
+  padding: 10px;
+}
+
+.enhanced-bonus-builder-tab .bonus-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.enhanced-bonus-builder-tab .bonus-item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid var(--ebb-border-color);
+}
+
+.enhanced-bonus-builder-tab .bonus-item:last-child {
+  border-bottom: none;
+}
+
+.enhanced-bonus-builder-tab .bonus-name {
+  flex: 1;
+  font-weight: bold;
+}
+
+.enhanced-bonus-builder-tab .bonus-type {
+  margin: 0 10px;
+  color: var(--ebb-accent-color);
+  font-style: italic;
+}
+
+.enhanced-bonus-builder-tab .bonus-controls {
+  display: flex;
+  gap: 5px;
+}
+
+.enhanced-bonus-builder-tab .bonus-control {
+  cursor: pointer;
+  color: var(--ebb-primary-color);
+}
+
+.enhanced-bonus-builder-tab .bonus-control:hover {
+  color: var(--ebb-secondary-color);
+}
+
+/* Bonus Workshop */
+.enhanced-bonus-builder-workshop {
+  min-width: 600px;
+  min-height: 400px;
+}
+
+.enhanced-bonus-builder-workshop .window-content {
+  padding: 0;
+}
+
+.enhanced-bonus-builder-workshop .tabs {
+  flex: 0 0 30px;
+  border-bottom: 1px solid var(--ebb-border-color);
+  padding: 0 5px;
+}
+
+.enhanced-bonus-builder-workshop .tabs .item {
+  line-height: 30px;
+  padding: 0 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.enhanced-bonus-builder-workshop .tabs .item.active {
+  color: var(--ebb-primary-color);
+  border-bottom: 2px solid var(--ebb-primary-color);
+}
+
+.enhanced-bonus-builder-workshop .tab {
+  padding: 10px;
+  height: calc(100% - 30px);
+  overflow-y: auto;
+}
+
+.enhanced-bonus-builder-workshop .form-group {
+  margin-bottom: 10px;
+}
+
+.enhanced-bonus-builder-workshop .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.enhanced-bonus-builder-workshop .form-group .hint {
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 2px;
+}
+
+.enhanced-bonus-builder-workshop .section-header {
+  border-bottom: 1px solid var(--ebb-border-color);
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  color: var(--ebb-primary-color);
+}
+
+.enhanced-bonus-builder-workshop .filter-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.enhanced-bonus-builder-workshop .filter-item {
+  padding: 5px;
+  border: 1px solid var(--ebb-border-color);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.enhanced-bonus-builder-workshop .filter-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.enhanced-bonus-builder-workshop .filter-item.active {
+  background-color: var(--ebb-primary-color);
+  color: white;
+}
+
+.enhanced-bonus-builder-workshop .footer {
+  border-top: 1px solid var(--ebb-border-color);
+  padding: 10px;
+  text-align: right;
+}
+
+.enhanced-bonus-builder-workshop .footer button {
+  margin-left: 5px;
+}

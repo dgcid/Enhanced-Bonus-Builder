@@ -1,0 +1,70 @@
+<form class="enhanced-bonus-builder-workshop">
+  <header class="sheet-header">
+    <div class="header-left">
+      <i class="fas fa-calculator" data-action="bonus-icon" style="color: {{iconColor}}"></i>
+      <span class="name-stacked">
+        <span class="title">{{localize "ENHANCEDBONUSBUILDER.ModuleTitle"}}</span>
+        <span class="subtitle">{{parentName}}</span>
+      </span>
+    </div>
+    <div class="header-right">
+      <i class="fas fa-calculator" data-action="bonus-icon"></i>
+    </div>
+  </header>
+
+  <div class="pages">
+    {{#if isNew}}
+    <section class="select-type">
+      <header class="header">
+        {{localize "ENHANCEDBONUSBUILDER.SelectType"}}
+        <i class="fa-solid fa-circle-question" data-tooltip="ENHANCEDBONUSBUILDER.SelectTypeTooltip"></i>
+      </header>
+      <div class="bonus-types">
+        {{#each bonusTypes as |name type|}}
+        <div class="bonus-type" data-type="{{type}}">
+          <i class="fas fa-{{lookup ../icons type}}"></i>
+          <h3>{{localize name}}</h3>
+        </div>
+        {{/each}}
+      </div>
+    </section>
+    {{else}}
+    <nav class="tabs" data-group="primary">
+      <a class="item" data-tab="description">{{localize "ENHANCEDBONUSBUILDER.Tabs.description"}}</a>
+      <a class="item" data-tab="configuration">{{localize "ENHANCEDBONUSBUILDER.Tabs.configuration"}}</a>
+      <a class="item" data-tab="filters">{{localize "ENHANCEDBONUSBUILDER.Tabs.filters"}}</a>
+      <a class="item" data-tab="advanced">{{localize "ENHANCEDBONUSBUILDER.Tabs.advanced"}}</a>
+    </nav>
+
+    <section class="tab" data-tab="description" data-group="primary">
+      {{> "modules/enhanced-bonus-builder/templates/sheet-description.hbs"}}
+    </section>
+
+    <section class="tab" data-tab="configuration" data-group="primary">
+      {{> "modules/enhanced-bonus-builder/templates/sheet-configuration.hbs"}}
+    </section>
+
+    <section class="tab" data-tab="filters" data-group="primary">
+      {{> "modules/enhanced-bonus-builder/templates/sheet-filters.hbs"}}
+    </section>
+
+    <section class="tab" data-tab="advanced" data-group="primary">
+      {{> "modules/enhanced-bonus-builder/templates/sheet-advanced.hbs"}}
+    </section>
+    {{/if}}
+  </div>
+
+  {{#unless isNew}}
+  <footer class="sheet-footer">
+    <button type="submit">
+      <i class="fas fa-save"></i> {{localize "Save"}}
+    </button>
+    <button type="button" data-action="delete">
+      <i class="fas fa-trash"></i> {{localize "Delete"}}
+    </button>
+    <button type="button" data-action="duplicate">
+      <i class="fas fa-copy"></i> {{localize "Duplicate"}}
+    </button>
+  </footer>
+  {{/unless}}
+</form>
