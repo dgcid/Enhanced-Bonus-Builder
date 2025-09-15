@@ -1,0 +1,50 @@
+{
+  "id": "enhanced-bonus-builder",
+  "title": "Enhanced Bonus Builder",
+  "description": "A module for creating and applying conditional bonuses to rolls in the DnD 5e system. This is a replacement for the archived Build-a-Bonus module.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "13",
+    "maximum": "13"
+  },
+  "authors": [
+    {
+      "name": "Your Name",
+      "discord": "your_discord",
+      "url": "https://github.com/yourusername"
+    }
+  ],
+  "esmodules": ["scripts/hooks.mjs"],
+  "styles": [
+    "styles/keys.css",
+    "styles/optionals.css",
+    "styles/overview.css",
+    "styles/sheet.css",
+    "styles/workshop.css",
+    "styles/shared.css"
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "5.1.2",
+          "verified": "5.1.2"
+        }
+      }
+    ]
+  },
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    }
+  ],
+  "url": "https://github.com/yourusername/enhanced-bonus-builder",
+  "manifest": "https://github.com/yourusername/enhanced-bonus-builder/releases/latest/download/module.json",
+  "download": "https://github.com/yourusername/enhanced-bonus-builder/releases/latest/download/enhanced-bonus-builder.zip"
+}

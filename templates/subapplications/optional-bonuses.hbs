@@ -1,0 +1,26 @@
+<div class="enhanced-bonus-builder-optional">
+  {{#if bonuses.length}}
+    <p class="hint">{{localize "ENHANCEDBONUSBUILDER.OptionalBonusesHint"}}</p>
+    <div class="bonus-list">
+      {{#each bonuses as |bonus|}}
+        <div class="bonus-item">
+          <div class="bonus-name">{{bonus.name}}</div>
+          <div class="bonus-value">{{lookup ../values bonus.id}}</div>
+          <div class="bonus-toggle">
+            <input type="checkbox" data-id="{{bonus.id}}" {{checked (includes ../selected bonus.id)}}>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+    <div class="dialog-buttons">
+      <button type="button" data-action="apply">
+        <i class="fas fa-check"></i> {{localize "ENHANCEDBONUSBUILDER.Apply"}}
+      </button>
+      <button type="button" data-action="cancel">
+        <i class="fas fa-times"></i> {{localize "ENHANCEDBONUSBUILDER.Cancel"}}
+      </button>
+    </div>
+  {{else}}
+    <p>{{localize "ENHANCEDBONUSBUILDER.NoOptionalBonuses"}}</p>
+  {{/if}}
+</div>

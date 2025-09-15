@@ -1,0 +1,33 @@
+<div class="form-group">
+  <label for="name">{{localize "ENHANCEDBONUSBUILDER.Fields.name"}}</label>
+  <input type="text" name="name" value="{{bonus.name}}" required>
+</div>
+
+<div class="form-group">
+  <label for="img">{{localize "Image"}}</label>
+  <div class="form-fields">
+    <button type="button" class="file-picker" data-type="image" data-target="img" title="{{localize 'FILES.BrowseTooltip'}}">
+      <i class="fas fa-file-import fa-fw"></i>
+    </button>
+    <input type="text" name="img" value="{{bonus.img}}" placeholder="path/to/image.png">
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="description">{{localize "ENHANCEDBONUSBUILDER.Fields.description"}}</label>
+  {{editor bonus.description target="description" button=true editable=true engine="prosemirror"}}
+</div>
+
+<div class="form-group">
+  <label>{{localize "Status"}}</label>
+  <div class="form-fields">
+    <label class="checkbox">
+      <input type="checkbox" name="enabled" {{checked bonus.enabled}}>
+      {{localize "ENHANCEDBONUSBUILDER.Fields.enabled"}}
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" name="optional" {{checked bonus.optional}}>
+      {{localize "ENHANCEDBONUSBUILDER.Fields.optional"}}
+    </label>
+  </div>
+</div>

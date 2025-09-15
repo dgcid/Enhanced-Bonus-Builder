@@ -1,0 +1,199 @@
+<!-- Consumption Section -->
+<div class="section">
+  <h2 class="section-header">{{localize "ENHANCEDBONUSBUILDER.Sections.consumption"}}</h2>
+  
+  <div class="form-group">
+    <label class="checkbox">
+      <input type="checkbox" name="consumption.enabled" {{checked bonus.consumption.enabled}}>
+      {{localize "ENHANCEDBONUSBUILDER.Consumption.enabled"}}
+    </label>
+    <p class="hint">{{localize "Whether this bonus consumes a resource when applied."}}</p>
+  </div>
+  
+  {{#if bonus.consumption.enabled}}
+  <div class="form-group">
+    <label class="checkbox">
+      <input type="checkbox" name="consumption.scales" {{checked bonus.consumption.scales}}>
+      {{localize "ENHANCEDBONUSBUILDER.Consumption.scales"}}
+    </label>
+    <p class="hint">{{localize "Whether the bonus scales with the amount consumed."}}</p>
+  </div>
+  
+  <div class="form-group">
+    <label for="consumption.type">{{localize "ENHANCEDBONUSBUILDER.Consumption.type"}}</label>
+    <div class="form-fields">
+      <select name="consumption.type">
+        {{selectOptions consumptionTypes selected=bonus.consumption.type localize=true}}
+      </select>
+    </div>
+  </div>
+  
+  {{#if bonus.consumption.type}}
+  <div class="form-group">
+    <label for="consumption.property">{{localize "ENHANCEDBONUSBUILDER.Consumption.property"}}</label>
+    <div class="form-fields">
+      <select name="consumption.property">
+        {{selectOptions consumptionProperties selected=bonus.consumption.property localize=true}}
+      </select>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label>{{localize "ENHANCEDBONUSBUILDER.Consumption.value"}}</label>
+    <div class="form-fields">
+      <input type="text" name="consumption.value.min" value="{{bonus.consumption.value.min}}" placeholder="Min">
+      <span class="sep">-</span>
+      <input type="text" name="consumption.value.max" value="{{bonus.consumption.value.max}}" placeholder="Max">
+      <span class="sep">@</span>
+      <input type="number" name="consumption.value.step" value="{{bonus.consumption.value.step}}" placeholder="Step" min="1">
+    </div>
+  </div>
+  
+  {{#if bonus.consumption.scales}}
+  <div class="form-group">
+    <label for="consumption.formula">{{localize "ENHANCEDBONUSBUILDER.Consumption.formula"}}</label>
+    <div class="form-fields">
+      <input type="text" name="consumption.formula" value="{{bonus.consumption.formula}}">
+    </div>
+    <p class="hint">{{localize "Formula to calculate the bonus based on consumption. Use @consumption to reference the amount consumed."}}</p>
+  </div>
+  {{/if}}
+  {{/if}}
+  {{/if}}
+</div>
+
+<!-- Aura Section -->
+<div class="section">
+  <h2 class="section-header">{{localize "ENHANCEDBONUSBUILDER.Sections.aura"}}</h2>
+  
+  <div class="form-group">
+    <label class="checkbox">
+      <input type="checkbox" name="aura.enabled" {{checked bonus.aura.enabled}}>
+      {{localize "ENHANCEDBONUSBUILDER.Aura.enabled"}}
+    </label>
+    <p class="hint">{{localize "Whether this bonus is an aura that affects other tokens."}}</p>
+  </div>
+  
+  {{#if bonus.aura.enabled}}
+  <div class="form-group">
+    <label class="checkbox">
+      <input type="checkbox" name="aura.template" {{checked bonus.aura.template}}>
+      {{localize "ENHANCEDBONUSBUILDER.Aura.template"}}
+    </label>
+    <p class="hint">{{localize "Whether this aura is attached to a template instead of a token."}}</p>
+  </div>
+  
+  <div class="form-group">
+    <label for="aura.range">{{localize "ENHANCEDBONUSBUILDER.Aura.range"}}</label>
+    <div class="form-fields">
+      <input type="text" name="aura.range" value="{{bonus.aura.range}}">
+    </div>
+    <p class="hint">{{localize "The range of the aura in feet."}}</p>
+  </div>
+  
+  <div class="form-group">
+    <label class="checkbox">
+      <input type="checkbox" name="aura.self" {{checked bonus.aura.self}}>
+      {{localize "ENHANCEDBONUSBUILDER.Aura.self"}}
+    </label>
+    <p class="hint">{{localize "Whether the aura affects its owner."}}</p>
+  </div>
+  
+  <div class="form-group">
+    <label for="aura.disposition">{{localize "ENHANCEDBONUSBUILDER.Aura.disposition"}}</label>
+    <div class="form-fields">
+      <select name="aura.disposition">
+        <option value="-1" {{selected (eq bonus.aura.disposition -1)}}>{{localize "ENHANCEDBONUSBUILDER.Aura.disposition.hostile"}}</option>
+        <option value="0" {{selected (eq bonus.aura.disposition 0)}}>{{localize "ENHANCEDBONUSBUILDER.Aura.disposition.neutral"}}</option>
+        <option value="1" {{selected (eq bonus.aura.disposition 1)}}>{{localize "ENHANCEDBONUSBUILDER.Aura.disposition.friendly"}}</option>
+      </select>
+    </div>
+    <p class="hint">{{localize "The disposition of tokens that are affected by the aura."}}</p>
+  </div>
+  
+  <div class="form-group">
+    <label for="aura.blockers">{{localize "ENHANCEDBONUSBUILDER.Aura.blockers"}}</label>
+    <div class="form-fields">
+      <input type="text" name="aura.blockers" value="{{bonus.aura.blockers}}">
+    </div>
+    <p class="hint">{{localize "Status effects that block this aura when applied to the owner."}}</p>
+  </div>
+  
+  <div class="form-group">
+    <label>{{localize "Requirements"}}</label>
+    <div class="form-fields">
+      <label class="checkbox">
+        <input type="checkbox" name="aura.require.move" {{checked bonus.aura.require.move}}>
+        {{localize "ENHANCEDBONUSBUILDER.Aura.require.move"}}
+      </label>
+      <label class="checkbox">
+        <input type="checkbox" name="aura.require.sight" {{checked bonus.aura.require.sight}}>
+        {{localize "ENHANCEDBONUSBUILDER.Aura.require.sight"}}
+      </label>
+    </div>
+  </div>
+  {{/if}}
+</div>
+
+<!-- Modifiers Section -->
+<div class="section">
+  <h2 class="section-header">{{localize "ENHANCEDBONUSBUILDER.Sections.modifiers"}}</h2>
+  
+  <div class="form-group">
+    <label class="checkbox">
+      <input type="checkbox" name="modifiers.enabled" {{checked bonus.modifiers.enabled}}>
+      {{localize "ENHANCEDBONUSBUILDER.Modifiers.enabled"}}
+    </label>
+    <p class="hint">{{localize "Whether this bonus applies modifiers to the target."}}</p>
+  </div>
+  
+  {{#if bonus.modifiers.enabled}}
+  <div class="form-group">
+    <label for="modifiers.formula">{{localize "ENHANCEDBONUSBUILDER.Modifiers.formula"}}</label>
+    <div class="form-fields">
+      <input type="text" name="modifiers.formula" value="{{bonus.modifiers.formula}}">
+    </div>
+    <p class="hint">{{localize "Formula to calculate the modifier value."}}</p>
+  </div>
+  
+  <div class="form-group">
+    <label for="modifiers.target">{{localize "ENHANCEDBONUSBUILDER.Modifiers.target"}}</label>
+    <div class="form-fields">
+      <select name="modifiers.target">
+        <option value="actor" {{selected (eq bonus.modifiers.target "actor")}}>{{localize "ENHANCEDBONUSBUILDER.Modifiers.target.actor"}}</option>
+        <option value="item" {{selected (eq bonus.modifiers.target "item")}}>{{localize "ENHANCEDBONUSBUILDER.Modifiers.target.item"}}</option>
+        <option value="roll" {{selected (eq bonus.modifiers.target "roll")}}>{{localize "ENHANCEDBONUSBUILDER.Modifiers.target.roll"}}</option>
+        <option value="target" {{selected (eq bonus.modifiers.target "target")}}>{{localize "ENHANCEDBONUSBUILDER.Modifiers.target.target"}}</option>
+      </select>
+    </div>
+    <p class="hint">{{localize "The target of the modifier."}}</p>
+  </div>
+  
+  <div class="form-group">
+    <label for="modifiers.mode">{{localize "ENHANCEDBONUSBUILDER.Modifiers.mode"}}</label>
+    <div class="form-fields">
+      <select name="modifiers.mode">
+        <option value="add" {{selected (eq bonus.modifiers.mode "add")}}>{{localize "ENHANCEDBONUSBUILDER.Modifiers.mode.add"}}</option>
+        <option value="multiply" {{selected (eq bonus.modifiers.mode "multiply")}}>{{localize "ENHANCEDBONUSBUILDER.Modifiers.mode.multiply"}}</option>
+        <option value="override" {{selected (eq bonus.modifiers.mode "override")}}>{{localize "ENHANCEDBONUSBUILDER.Modifiers.mode.override"}}</option>
+        <option value="upgrade" {{selected (eq bonus.modifiers.mode "upgrade")}}>{{localize "ENHANCEDBONUSBUILDER.Modifiers.mode.upgrade"}}</option>
+        <option value="downgrade" {{selected (eq bonus.modifiers.mode "downgrade")}}>{{localize "ENHANCEDBONUSBUILDER.Modifiers.mode.downgrade"}}</option>
+      </select>
+    </div>
+    <p class="hint">{{localize "How the modifier is applied to the target."}}</p>
+  </div>
+  
+  <div class="form-group">
+    <label for="modifiers.priority">{{localize "ENHANCEDBONUSBUILDER.Modifiers.priority"}}</label>
+    <div class="form-fields">
+      <select name="modifiers.priority">
+        <option value="low" {{selected (eq bonus.modifiers.priority "low")}}>{{localize "ENHANCEDBONUSBUILDER.Modifiers.priority.low"}}</option>
+        <option value="normal" {{selected (eq bonus.modifiers.priority "normal")}}>{{localize "ENHANCEDBONUSBUILDER.Modifiers.priority.normal"}}</option>
+        <option value="high" {{selected (eq bonus.modifiers.priority "high")}}>{{localize "ENHANCEDBONUSBUILDER.Modifiers.priority.high"}}</option>
+        <option value="critical" {{selected (eq bonus.modifiers.priority "critical")}}>{{localize "ENHANCEDBONUSBUILDER.Modifiers.priority.critical"}}</option>
+      </select>
+    </div>
+    <p class="hint">{{localize "The priority of the modifier when multiple modifiers are applied."}}</p>
+  </div>
+  {{/if}}
+</div>

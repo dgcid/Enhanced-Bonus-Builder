@@ -1,0 +1,184 @@
+/* Enhanced Bonus Builder - Sheet Styles */
+
+.enhanced-bonus-builder-sheet {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.enhanced-bonus-builder-sheet .sheet-header {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--ebb-border-color);
+}
+
+.enhanced-bonus-builder-sheet .header-left,
+.enhanced-bonus-builder-sheet .header-right {
+  display: flex;
+  align-items: center;
+}
+
+.enhanced-bonus-builder-sheet .name-stacked {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.enhanced-bonus-builder-sheet .title {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.enhanced-bonus-builder-sheet .subtitle {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.enhanced-bonus-builder-sheet .tabs {
+  flex: 0 0 30px;
+  border-bottom: 1px solid var(--ebb-border-color);
+  padding: 0 5px;
+}
+
+.enhanced-bonus-builder-sheet .tabs .item {
+  line-height: 30px;
+  padding: 0 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.enhanced-bonus-builder-sheet .tabs .item.active {
+  color: var(--ebb-primary-color);
+  border-bottom: 2px solid var(--ebb-primary-color);
+}
+
+.enhanced-bonus-builder-sheet .tab {
+  padding: 10px;
+  height: calc(100% - 30px);
+  overflow-y: auto;
+}
+
+.enhanced-bonus-builder-sheet .form-group {
+  margin-bottom: 10px;
+}
+
+.enhanced-bonus-builder-sheet .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.enhanced-bonus-builder-sheet .form-group .hint {
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 2px;
+}
+
+.enhanced-bonus-builder-sheet .form-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.enhanced-bonus-builder-sheet .checkbox {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.enhanced-bonus-builder-sheet .checkbox input {
+  margin-right: 5px;
+}
+
+.enhanced-bonus-builder-sheet .section {
+  margin-bottom: 20px;
+}
+
+.enhanced-bonus-builder-sheet .section-header {
+  border-bottom: 1px solid var(--ebb-border-color);
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  color: var(--ebb-primary-color);
+}
+
+.enhanced-bonus-builder-sheet .filter-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.enhanced-bonus-builder-sheet .filter-item {
+  padding: 10px;
+  border: 1px solid var(--ebb-border-color);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.enhanced-bonus-builder-sheet .filter-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.enhanced-bonus-builder-sheet .filter-item.active {
+  background-color: var(--ebb-primary-color);
+  color: white;
+}
+
+.enhanced-bonus-builder-sheet .filter-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.enhanced-bonus-builder-sheet .filter-hint {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.enhanced-bonus-builder-sheet .active-filters {
+  margin-top: 20px;
+}
+
+.enhanced-bonus-builder-sheet .active-filter {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid var(--ebb-border-color);
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.enhanced-bonus-builder-sheet .filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.enhanced-bonus-builder-sheet .filter-header h3 {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.enhanced-bonus-builder-sheet .filter-remove {
+  cursor: pointer;
+  color: var(--ebb-danger-color);
+}
+
+.enhanced-bonus-builder-sheet .filter-content {
+  padding-top: 5px;
+}
+
+.enhanced-bonus-builder-sheet .sheet-footer {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  border-top: 1px solid var(--ebb-border-color);
+}
+
+.enhanced-bonus-builder-sheet .sheet-footer button {
+  margin-left: 5px;
+}
