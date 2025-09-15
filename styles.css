@@ -1,0 +1,72 @@
+/* Enhanced Bonus Builder - Simplified Styles - Foundry VTT 13 Compatible */
+
+/* Button in window header */
+.enhanced-bonus-builder-button {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  line-height: 26px;
+  text-align: center;
+  margin-left: 5px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid #c9c7b8;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.enhanced-bonus-builder-button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.enhanced-bonus-builder-button i {
+  margin: 0;
+  color: #4b6eaf;
+}
+
+/* Tab content */
+.enhanced-bonus-builder-tab {
+  padding: 10px;
+}
+
+.enhanced-bonus-builder-tab-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.enhanced-bonus-builder-tab-content .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #c9c7b8;
+}
+
+.enhanced-bonus-builder-tab-content .header h2 {
+  margin: 0;
+  font-size: 1.3em;
+  color: #4b6eaf;
+}
+
+.enhanced-bonus-builder-tab-content .create-bonus {
+  background-color: #4b6eaf;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.enhanced-bonus-builder-tab-content .create-bonus:hover {
+  background-color: #7a9cd3;
+}
+
+/* Foundry VTT 13 specific styles */
+.enhanced-bonus-builder-tab-content .content {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid #c9c7b8;
+  border-radius: 5px;
+}
