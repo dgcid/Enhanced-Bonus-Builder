@@ -1,7 +1,7 @@
 {
   "id": "enhanced-bonus-builder",
   "title": "Enhanced Bonus Builder",
-  "description": "A module for creating and applying conditional bonuses to rolls in the DnD 5e system. This is a replacement for the archived Build-a-Bonus module.",
+  "description": "A module for creating and applying conditional bonuses to rolls in the DnD 5e system.",
   "version": "1.0.0",
   "compatibility": {
     "minimum": "11",
@@ -11,19 +11,11 @@
   "authors": [
     {
       "name": "Your Name",
-      "discord": "your_discord",
-      "url": "https://github.com/yourusername"
+      "url": "https://github.com/dgcid"
     }
   ],
-  "esmodules": ["scripts/hooks.mjs"],
-  "styles": [
-    "styles/keys.css",
-    "styles/optionals.css",
-    "styles/overview.css",
-    "styles/sheet.css",
-    "styles/workshop.css",
-    "styles/shared.css"
-  ],
+  "scripts": ["main.js"],
+  "styles": ["styles.css"],
   "relationships": {
     "systems": [
       {
@@ -36,14 +28,6 @@
       }
     ]
   },
-  "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json",
-      "flags": {}
-    }
-  ],
   "url": "https://github.com/dgcid/Enhanced-Bonus-Builder",
   "manifest": "https://raw.githubusercontent.com/dgcid/Enhanced-Bonus-Builder/main/module.json",
   "download": "https://github.com/dgcid/Enhanced-Bonus-Builder/archive/refs/heads/main.zip"
