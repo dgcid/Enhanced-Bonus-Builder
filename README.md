@@ -1,60 +1,69 @@
 # Enhanced Bonus Builder
 
-A module for Foundry VTT that allows you to create and apply conditional bonuses to rolls in the DnD 5e system. This is a replacement for the archived Build-a-Bonus module.
+A module for creating and applying conditional bonuses to rolls in the DnD 5e system. This is a replacement for the archived Build-a-Bonus module.
 
 ## Features
 
-Enhanced Bonus Builder allows you to create bonuses that apply to:
-- Attack rolls
-- Damage rolls
-- Saving throw DCs
-- Saving throws
-- Ability checks
-- Hit die rolls
-
-These bonuses can be filtered to apply only under specific circumstances, such as:
-- Only for specific damage types
-- Only for specific item types
-- Only for specific spell components
-- Only for specific weapon properties
-- Only when certain conditions are met
-- And many more!
-
-## How to Use
-
-Open any actor's sheet, any item sheet, or any effect config, then click the bonus icon in the header. Choose the type of bonus you want to create, then fill out the name, description, and the bonus. Then start narrowing down when and how the bonus should apply, using the available filters.
-
-As of Foundry VTT version 12, Enhanced Bonus Builder also supports adding bonuses to Scene Regions. A button for this can be found in the region's sheet.
-
-## Examples
-
-### Alchemical Savant (Artificer Feature)
-Add intelligence modifier to damage rolls of all spell-type items, but only if the spell deals acid, fire, necrotic, poison, or healing damage, and only if it has a material (M) component.
-
-### Divination Savant (Wizard Feature)
-Give your wizard player a bonus to the saving throw DC with just divination spells, and make the bonus equal to the level of the spell.
-
-### Magical Pugilist
-Create a feature similar to Brutal Critical that applies only to melee spell attacks.
-
-### Paladin's Aura
-Create an aura that grants each enemy within 10 feet a -2 to melee attack rolls.
-
-### Rogue's Magic Item
-Create a magic item that creates a 15-foot radius template, inside which everyone gets a damage roll bonus equal to the rogue's sneak attack dice.
+- Create conditional bonuses for attack rolls, damage rolls, saving throws, ability checks, and hit die rolls
+- Apply bonuses automatically based on conditions
+- Manage bonuses through a dedicated interface
+- Compatible with Foundry VTT versions 11-13
 
 ## Installation
 
-1. In the Foundry VTT setup screen, go to the "Add-on Modules" tab
+1. In the Foundry VTT setup screen, go to "Add-on Modules"
 2. Click "Install Module"
-3. Search for "Enhanced Bonus Builder" or paste the following manifest URL:
-   `https://github.com/yourusername/enhanced-bonus-builder/releases/latest/download/module.json`
+3. In the "Manifest URL" field, paste: `https://github.com/yourusername/enhanced-bonus-builder/releases/latest/download/module.json`
 4. Click "Install"
+
+## Usage
+
+### Accessing the Module
+
+There are multiple ways to access the Enhanced Bonus Builder:
+
+1. **Character Sheet Tab**: A new tab is added to character sheets labeled "Enhanced Bonus Builder"
+2. **Floating Button**: If the tab integration fails, a floating button is added to the character sheet
+3. **Sidebar Button**: A button is added to the sidebar for accessing the standalone interface
+
+### Creating Bonuses
+
+1. Open the Enhanced Bonus Builder interface using one of the methods above
+2. Click the "Create Bonus" button
+3. Fill in the bonus details:
+   - Name: A descriptive name for the bonus
+   - Type: The type of roll this bonus applies to
+   - Value: The bonus value (can be a fixed number or a formula)
+   - Conditions: When this bonus should apply
+
+### Managing Bonuses
+
+- Enable/Disable: Toggle bonuses on or off
+- Edit: Modify existing bonuses
+- Delete: Remove bonuses you no longer need
+
+## Settings
+
+- **Show Sheet Tab**: Enable/disable the character sheet tab integration
+- **Show Applied Bonuses**: Show a chat message with the bonuses that were applied to a roll
+- **Show Optional Bonuses**: Show a dialog with optional bonuses that can be applied to a roll
+- **Use Standalone Interface**: Use a standalone interface instead of integrating with character sheets
+- **Debug Mode**: Enable debug logging for troubleshooting
+
+## Troubleshooting
+
+If you encounter issues with the character sheet integration:
+
+1. Try enabling "Use Standalone Interface" in the module settings
+2. Check if the debug tools are available by clicking the "EBB Debug Tools" button in the sidebar
+3. Use the debug tools to reset processed flags and force process sheets
+
+## Compatibility
+
+- Requires Foundry VTT version 11-13
+- Requires DnD 5e system version 5.1.2 or later
+- Compatible with most character sheet modules
 
 ## License
 
 This module is licensed under the MIT License.
-
-## Acknowledgements
-
-This module is inspired by the original Build-a-Bonus module created by Zhell, which was archived in November 2024.

@@ -1,0 +1,194 @@
+/* Enhanced Bonus Builder Styles */
+
+/* Standalone Application */
+.enhanced-bonus-builder-app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.enhanced-bonus-builder-header {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.enhanced-bonus-builder-content {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.enhanced-bonus-builder-footer {
+  padding: 5px 10px;
+  border-top: 1px solid #ccc;
+  font-size: 0.8em;
+  color: #666;
+  text-align: center;
+}
+
+.actor-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.actor-selection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.actor-select {
+  min-width: 200px;
+}
+
+.create-bonus {
+  background-color: #4b6eaf;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.create-bonus:hover {
+  background-color: #3a5a9f;
+}
+
+.no-bonuses, .no-actor {
+  background-color: rgba(0,0,0,0.05);
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Character Sheet Tab */
+.enhanced-bonus-builder-tab-content {
+  padding: 10px;
+}
+
+.enhanced-bonus-builder-tab-content .header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.enhanced-bonus-builder-tab-content .header h2 {
+  margin: 0;
+}
+
+.bonus-type-section {
+  margin-bottom: 15px;
+}
+
+.bonus-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bonus-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.bonus-item:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.bonus-controls {
+  display: flex;
+  gap: 5px;
+}
+
+.bonus-control {
+  cursor: pointer;
+  padding: 2px 5px;
+}
+
+.enhanced-bonus-builder-enabled {
+  color: #4CAF50;
+}
+
+.enhanced-bonus-builder-disabled {
+  color: #F44336;
+}
+
+/* Floating Button */
+.enhanced-bonus-builder-float-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #4b6eaf;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.enhanced-bonus-builder-float-button:hover {
+  background-color: #3a5a9f;
+}
+
+/* Sidebar Button */
+.enhanced-bonus-builder-sidebar-button {
+  margin: 5px;
+  padding: 5px 10px;
+  background-color: #4b6eaf;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  width: 90%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.enhanced-bonus-builder-sidebar-button:hover {
+  background-color: #3a5a9f;
+}
+
+/* Workshop Dialog */
+.enhanced-bonus-builder-workshop {
+  min-height: 400px;
+}
+
+.enhanced-bonus-builder-workshop .form-group {
+  margin-bottom: 10px;
+}
+
+.enhanced-bonus-builder-workshop label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.enhanced-bonus-builder-workshop input,
+.enhanced-bonus-builder-workshop select,
+.enhanced-bonus-builder-workshop textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.enhanced-bonus-builder-workshop .buttons {
+  margin-top: 20px;
+  text-align: right;
+}

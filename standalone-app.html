@@ -1,0 +1,46 @@
+<div class="enhanced-bonus-builder-app">
+  <div class="enhanced-bonus-builder-header">
+    <h2>Enhanced Bonus Builder</h2>
+    <div class="actor-selection">
+      <label>Select Actor:</label>
+      <select class="actor-select">
+        {{#if actors.length}}
+          <option value="">-- Select Actor --</option>
+          {{#each actors as |actor|}}
+            <option value="{{actor.id}}" {{#if (eq actor.id ../actor.id)}}selected{{/if}}>{{actor.name}}</option>
+          {{/each}}
+        {{else}}
+          <option value="">No actors available</option>
+        {{/if}}
+      </select>
+    </div>
+  </div>
+  
+  <div class="enhanced-bonus-builder-content">
+    {{#if hasActor}}
+      <div class="actor-info">
+        <h3>{{actorName}}</h3>
+        <button type="button" class="create-bonus">
+          <i class="fas fa-plus"></i> Create Bonus
+        </button>
+      </div>
+      
+      <div class="bonuses-container">
+        <div class="no-bonuses">
+          <p>No bonuses have been created for this actor yet.</p>
+          <p>Click the "Create Bonus" button to add a new bonus.</p>
+        </div>
+      </div>
+    {{else}}
+      <div class="no-actor">
+        <p>Please select an actor from the dropdown above.</p>
+        <p>You can also select a token on the canvas to automatically select that actor.</p>
+      </div>
+    {{/if}}
+  </div>
+  
+  <div class="enhanced-bonus-builder-footer">
+    <p>Enhanced Bonus Builder - A replacement for the Build-a-Bonus module</p>
+  </div>
+</div>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
