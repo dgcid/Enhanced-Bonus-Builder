@@ -1,0 +1,138 @@
+/* Enhanced Bonus Builder - Overview Tab Styles */
+
+.enhanced-bonus-builder-tab {
+  padding: 10px;
+}
+
+.enhanced-bonus-builder-tab-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.enhanced-bonus-builder-tab-content .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--ebb-border-color);
+}
+
+.enhanced-bonus-builder-tab-content .header h2 {
+  margin: 0;
+  font-size: 1.3em;
+  color: var(--ebb-primary-color);
+}
+
+.enhanced-bonus-builder-tab-content .create-bonus {
+  background-color: var(--ebb-primary-color);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.enhanced-bonus-builder-tab-content .create-bonus:hover {
+  background-color: var(--ebb-secondary-color);
+}
+
+.enhanced-bonus-builder-tab-content .bonus-type-section {
+  margin-bottom: 20px;
+}
+
+.enhanced-bonus-builder-tab-content .bonus-type-section h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.1em;
+  color: var(--ebb-accent-color);
+  border-bottom: 1px solid var(--ebb-border-color);
+  padding-bottom: 3px;
+}
+
+.enhanced-bonus-builder-tab-content .bonus-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.enhanced-bonus-builder-tab-content .bonus-item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid var(--ebb-border-color);
+}
+
+.enhanced-bonus-builder-tab-content .bonus-item:last-child {
+  border-bottom: none;
+}
+
+.enhanced-bonus-builder-tab-content .bonus-name {
+  flex: 1;
+  font-weight: bold;
+}
+
+.enhanced-bonus-builder-tab-content .bonus-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.enhanced-bonus-builder-tab-content .bonus-control {
+  cursor: pointer;
+  color: var(--ebb-primary-color);
+  transition: color 0.2s ease;
+}
+
+.enhanced-bonus-builder-tab-content .bonus-control:hover {
+  color: var(--ebb-secondary-color);
+}
+
+.enhanced-bonus-builder-tab-content .toggle-bonus {
+  width: 20px;
+  text-align: center;
+}
+
+.enhanced-bonus-builder-tab-content .edit-bonus {
+  width: 20px;
+  text-align: center;
+}
+
+.enhanced-bonus-builder-tab-content .delete-bonus {
+  width: 20px;
+  text-align: center;
+  color: var(--ebb-danger-color);
+}
+
+.enhanced-bonus-builder-tab-content .delete-bonus:hover {
+  color: #ff0000;
+}
+
+.enhanced-bonus-builder-tab-content .no-bonuses {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Button in window header */
+.enhanced-bonus-builder-button {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  line-height: 26px;
+  text-align: center;
+  margin-left: 5px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--ebb-border-color);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.enhanced-bonus-builder-button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.enhanced-bonus-builder-button i {
+  margin: 0;
+}

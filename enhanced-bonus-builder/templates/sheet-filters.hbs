@@ -1,0 +1,26 @@
+<div class="filter-list">
+  {{#each availableFilters as |filter id|}}
+  <div class="filter-item {{#if (lookup ../activeFilters id)}}active{{/if}}" data-filter="{{id}}">
+    <div class="filter-name">{{localize filter.name}}</div>
+    <div class="filter-hint">{{localize filter.hint}}</div>
+  </div>
+  {{/each}}
+</div>
+
+<div class="active-filters">
+  {{#each activeFilters as |filter id|}}
+  <div class="active-filter" data-filter="{{id}}">
+    <div class="filter-header">
+      <h3>{{localize (lookup ../availableFilters id).name}}</h3>
+      <a class="filter-remove" data-action="remove-filter" data-filter="{{id}}"><i class="fas fa-times"></i></a>
+    </div>
+    <div class="filter-content">
+      {{{filter.html}}}
+    </div>
+  </div>
+  {{/each}}
+</div>
+
+<script>
+  // This will be replaced by the application's _activateFilterListeners method
+</script>

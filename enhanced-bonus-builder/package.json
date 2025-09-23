@@ -1,0 +1,16 @@
+{
+  "name": "enhanced-bonus-builder",
+  "version": "1.0.0",
+  "description": "A module for creating and applying conditional bonuses to rolls in the DnD 5e system.",
+  "main": "scripts/hooks.mjs",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "rollup": "^3.0.0"
+  }
+}
