@@ -3927,7 +3927,12 @@ globalThis.enhancedBonusBuilder = {
   },
   TYPES: Object.keys(models.Babonus),
   applications: applications,
-  filters: {...filters}
+  filters: {...filters},
+  openApp: function(actor) {
+    const workshop = new applications.BabonusWorkshop(actor || (game.user.character || canvas.tokens.controlled[0]?.actor));
+    workshop.render(true);
+    return workshop;
+  }
 };
 
 /**
@@ -4050,7 +4055,7 @@ async function ready() {
       await Macro.create({
         name: "Enhanced Bonus Builder",
         type: "script",
-        command: `game.modules.get('enhanced-bonus-builder').api.openBonusWorkshopForActor();`,
+        command: `game.enhancedBonusBuilder.openApp();`,
         img: "icons/svg/dice-target.svg",
         scope: "global"
       });
